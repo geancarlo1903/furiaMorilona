@@ -1,0 +1,472 @@
+/*font-family: 'Playfair Display', serif;*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif; 
+    text-decoration: none;
+}
+/*---------navegador---------*/
+nav{
+    background-color: #FCED0D;
+    width: 100%;
+    z-index: 900;
+    position: fixed;
+    padding: 15px 0px;
+}
+nav>ul{
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 30px;
+}
+li.logo {
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+li.logo a img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+nav>ul>ul{
+    list-style: none;
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+nav>ul>ul a{
+    color: black;
+    font-weight: bold;
+}
+nav>ul>ul li{
+    display: flex;
+    align-items: center;
+}
+li.equipo ul a{
+	display: block;
+}
+li.equipo ul{
+    display: none;
+    position: absolute;
+    top: 60%;
+    min-width: 140px;
+}
+li.equipo>ul>li{
+ margin: 20px 15px;   
+}
+li.equipo:hover>ul{
+    display: block;
+}
+/*-------slaider-------*/
+header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.mascara{
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    overflow: hidden;
+}
+.mascara .slider{
+    height: 100%;
+    width: 400%;
+    position: relative;
+
+    display: flex;
+    
+    animation-name: slide;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+.mascara .slider .cuadros{
+    height: 100%;
+    width: 25%;
+    position: relative;
+}
+.mascara .slider .cuadros img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@keyframes slide{
+    0%{left: 0;}
+    15%{left: 0;}
+    
+    25%{left: -100%;}
+    40%{left: -100%;}
+    
+    50%{left: -200%;}
+    65%{left: -200%;}
+    
+    80%{left: -300%;}
+    100%{left: -300%;}
+
+}
+/*---------Seccion club---------*/
+#club{
+    padding-top: 140px;
+    width: 100%;
+}
+article{
+    width: 80%;
+    margin: 0 auto;
+}
+article.furia{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+article.furia h2{
+    width: 100%;
+    text-align: center;
+    font-size: 60px;
+    color: #000;
+}
+article.furia p{
+    font-size: 20px;
+    width: 65%;
+}
+div.furiaImg{
+    width: 30%;
+}
+div.furiaImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*-------personal-------*/
+.mascaraP{
+    height: 400px;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.sliderP{
+    height: 100%;
+    position: relative;
+    /*display*/
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /*animacion del slider*/
+    animation-name: slider;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+.cuadrosP{
+    height: 100%;
+    position: relative;
+    width: 45%;
+    padding: 15px;
+    position: relative;
+}
+.cuadrosP h3{
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 35px;
+}
+.nombre{
+    display: block;
+    width: 100%;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+}
+.personalImg {
+    width:  35%;
+    float: right;
+}
+.personalImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@keyframes slider{
+    0%{top: 0;}
+    15%{top: 0;}
+    
+    25%{top: -100%;}
+    40%{top: -100%;}
+    
+    50%{top: -200%;}
+    65%{top: -200%;}
+    
+    80%{top: -300%;}
+    100%{top: -300%;}
+}
+/*-------uniforme-------*/
+.uniforme{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.uniforme h2{
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 60px;
+}
+.camiseta, .pantaloneta{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.camiseta p, .pantaloneta p{
+    color: #000;
+    font-size: 20px;
+}
+.camisetaImg, .pantalonetaImg{
+    width: 50%;
+}
+.camisetaImg img, .pantalonetaImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*---------femenino---------*/
+/*----------banner----------*/
+#equipoF{
+    width: 100%;
+}
+.banerFemenino{
+    width: 100%;
+    height: 600px;
+}
+.banerFemenino img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*-----tabla de equipo-----*/
+.equipoFe{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 25px auto;
+    border: 1px black solid;
+    box-shadow: 0 20px 20px rgb(68, 68, 68);
+}
+.cabecera{
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    background-color: #000;
+    color: #FCED0D;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+.equipoFe P{
+    font-size: 20px;
+    padding: 5px 10px;
+    font-weight: 700;
+}
+.Horadio{
+    width: 80%;
+    margin: 25px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px black solid;
+    box-shadow: 0 20px 20px rgb(68, 68, 68);
+}
+.containerFecha, .containerhora{
+    font-size: 20px;
+    padding: 5px 10px;
+    font-weight: 700;
+}
+.titulo{
+    font-size: 25px;
+}
+#equipoM{
+    width: 100%;
+}
+.banerMasculino{
+    width: 100%;
+    height: 600px;
+}
+.banerMasculino img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#equipoM div.equipoFe .titulo{
+    width: 100%;
+    padding-left: 20px;
+    font-weight: bold;
+}
+/*--------torneos--------*/
+#torneo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: space-between;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 130px;
+}
+#torneo h2{
+    width: 100%;
+    text-align: center;
+    font-size: 60px;
+    color: #000;
+    padding-left: 20px;
+
+}
+#torneo figure{
+    width: 40%;
+    min-width: 300px;
+    height: 300px;
+    margin: 20px 10px;
+    box-shadow: 0 20px 20px rgb(68, 68, 68);
+    
+    position: relative;
+}
+#torneo figure img{
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+
+}
+#torneo figure figcaption{
+    width: 100%;
+    height: 20%;
+    font-size: 2em;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.486);
+    border-radius: 10px 10px 0 0;
+    transition: 0.4s;
+
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+}
+#torneo figure:hover figcaption{
+    width: 100%;
+    height: 100%;
+    font-size: 3em;
+    animation-delay: 10s;
+}
+.hora, .lugar{
+    display: none;
+}
+#torneo figure:hover .hora, #torneo figure:hover .lugar{
+    display: inline;
+    width: 100%;
+}
+/*--------footer--------*/
+footer{
+    border: black solid;
+    background-color: black;
+
+}
+.container{
+    width: 80%;
+    padding: 10px 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logoFooter{
+    width: 10%;
+}
+.logoFooter img, .facebook img, .instagram img, .WhatsApp img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.container p, .contacto h2{
+    color: #FCED0D;
+}
+.contacto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.contacto h2{
+    width: 100%;
+    text-align: center;
+}
+.facebook, .instagram, .WhatsApp{
+    width: 20%;
+    padding: 3px;
+}
+#ventana_emergente{
+    background-color: rgba(56, 56, 56, 0.658);
+    position: fixed;
+    top:0;
+    z-index: 910;
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.open{
+    left: 0;
+}
+.close{
+    left: -120%;
+}
+#ventana_emergente .contenido, form{
+    width: 80%;
+    height: 80%;
+    position: relative;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btnX{
+    position: absolute;
+    top: 20x;
+    right: 10px;
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.contenido h2, .contenido p.texto{
+    color: #FCED0D;
+}
+.contenido h2{
+    font-size: 60px;
+}
+.contenido p.texto{
+    font-size: 30px;
+}
+#mensaje{
+    border: none;
+    outline: none;
+    margin: 10px 0px 15px 0px;
+    border-radius: 30px;
+    padding: 15px;
+    resize: none;
+}
+.botonEnviar{
+    border: none;
+    background-color: black;
+    color: #FCED0D;
+    font-size: 1.4em;
+    padding: 3px 10px;
+    border-radius: 15px;
+}
