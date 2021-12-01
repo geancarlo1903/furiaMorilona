@@ -370,6 +370,9 @@
     }
     function cerrarventana(){
         var ve = document.getElementById("ventana_emergente");
+        var formulario = document.forms["datos"];
+            formulario.reset();
+
             if(ve.className==="open"){
                 ve.className="close"
             }
@@ -377,6 +380,10 @@
     function msm(){
         var formulario = document.forms["datos"];
         var mensaje = formulario["mensaje"].value;
+        var url = "https://wa.me/573004505634?text=prueva de mensaje " + mensaje +" finaliza prueva"
+        window.open(url, "_blank");
+        console.log(url);
     }
+    
 </script>
 </html>
